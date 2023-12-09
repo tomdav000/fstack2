@@ -33,7 +33,6 @@ export const useGalStore = defineStore({
         await axios.post('/api/content',ga,{headers:{'Content-Type':'multipart/form-data'}}).then((res)=>{
           console.log(res.data)
         }).catch((err)=>console.log('error uploading',err))
-        this.getGals()
       }catch(error){
         alert(error)
         console.log(error)
@@ -43,7 +42,6 @@ export const useGalStore = defineStore({
       try{
         const config = {headers:{'Content-Type':'multipart/form-data'}}
         await axios.put(`/api/content/${ga.id}`,ga,config)
-        this.getGals()
       }catch(error){
         alert(error)
         console.log(error)
