@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as t,a as c}from"./index-8F0l4kE_.js";const o={},a={class:"container"},n=c("h1",{class:"fs-4 text-center"},"This is an about page",-1),_=[n];function r(i,d){return s(),t("div",a,_)}const h=e(o,[["render",r]]);export{h as default};
