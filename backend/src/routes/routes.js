@@ -163,7 +163,7 @@ router.post('/',async(req,res)=>{
 				}
 				const newGal = {
 					name:name,
-					photo: img_name,
+					photo: img_name
 				}
 				Gal.create(newGal)
 				res.redirect('/api/content')
