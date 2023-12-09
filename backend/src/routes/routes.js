@@ -7,7 +7,7 @@ const router = express.Router()
 Agency.belongsTo(Gal)
 Gal.hasMany(Agency,{as:'agencys'})
 
-sequelize.sync({alter:true}).then(()=>console.log('Database is in sync'))
+sequelize.sync().then(()=>console.log('Database is in sync'))
 .catch((err)=>console.log('Database is not synchronized at the moment',err))
 
 //Ag routes//
