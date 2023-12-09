@@ -165,7 +165,7 @@ router.post('/',async(req,res)=>{
 					name:name,
 					photo: img_name
 				}
-				Gal.create(newGal)
+				await Gal.create(newGal)
 				res.redirect('/api/content')
 			})
 		} else {
