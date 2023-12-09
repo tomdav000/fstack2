@@ -146,10 +146,9 @@ router.put('/:id',async(req,res)=>{
 	}
 })
 
-router.post('/',(req,res)=>{
+router.post('/',async(req,res)=>{
 	try{
 		const name = req.body.name;
-		let photo = '';
 		if(!req.files){
 			return res.status(500).send('No Files Attached.')
 		}
