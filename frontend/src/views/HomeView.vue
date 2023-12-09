@@ -34,8 +34,8 @@ onMounted(()=>{
 <template>
   <div class="container">
     <form align='center'>
-      <input type="text" v-model='newGal.name' placeholder="Enter Girl Name">
-      <input type="file" @change='uploadFile' placeholder="upload file">
+      <input type="text" v-model='newGal.name' name='newGal.name' placeholder="Enter Girl Name">
+      <input type="file" @change='uploadFile' name='newGal.photo' placeholder="upload file">
       <button @click.prevent='addNewGal(newGal)'>Add New Girl</button>
     </form>
   </div>
