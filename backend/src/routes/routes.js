@@ -165,7 +165,6 @@ router.post('/',async(req,res)=>{
 					photo: img_name
 				}
 				Gal.create(newGal)
-				console.log(req.files.photo)
 				console.log(newGal)
 				res.redirect('/api/content')
 			})
