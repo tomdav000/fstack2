@@ -30,8 +30,7 @@ export const useGalStore = defineStore({
     async addGal(ga){
       try{
         const config = {headers:{'Content-Type':'multipart/form-data'}}
-        const gal = await axios.post('/api/content',ga,config)
-        console.log(gal)
+        await axios.post('/api/content',ga,{headers:{'Content-Type':'multipart/form-data'}})
         this.getGals()
       }catch(error){
         alert(error)
