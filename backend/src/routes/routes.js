@@ -4,10 +4,11 @@ const Agency = require('../models/Agency')
 const sequelize = require('../config/db')
 const router = express.Router()
 
-Agency.belongsTo(Gal)
 Gal.hasMany(Agency,{as:'agencys'})
+Agency.belongsTo(Gal)
 
-sequelize.sync().then(()=>console.log('Database is in sync'))
+
+sequelize.sync({alter:true}).then(()=>console.log('Database is in sync'))
 .catch((err)=>console.log('Database is not synchronized at the moment',err))
 
 //Ag routes//

@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy:{
       '/api':{
-        target: 'http://localhost:8701',
+        target: 'https://fullstack2-86q9.onrender.com',
         changeOrigin: true,
         rewrite: (path) => { console.log(path); return path.replace('/^\/api/','')}
       }
