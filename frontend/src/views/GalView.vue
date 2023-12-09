@@ -63,8 +63,8 @@ onMounted(()=>{
   <hr/>
   <div class="container">
   	<form align='center'>
-  		<input type="text" v-model='addAg.title' placeholder="Enter Name of Agency">
-  		<input type="text" v-model='addAg.location' placeholder="Location of Agency">
+  		<input type="text" v-model='addAg.title' name="addAg.title" placeholder="Enter Name of Agency">
+  		<input type="text" v-model='addAg.location' name='addAg.location' placeholder="Location of Agency">
   		<button class="btn btn-warning" @click.prevent='addNewAgency(addAg)'>Add Agency</button>
   	</form>
   </div>
