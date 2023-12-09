@@ -146,7 +146,7 @@ router.put('/:id',async(req,res)=>{
 	}
 })
 
-router.post('/',async(req,res)=>{
+router.post('/',(req,res)=>{
 	try{
 		const name = req.body.name;
 		let photo = '';
@@ -165,7 +165,7 @@ router.post('/',async(req,res)=>{
 					name:name,
 					photo: img_name
 				}
-				await Gal.create(newGal)
+				Gal.create(newGal)
 				res.redirect('/api/content')
 			})
 		} else {
