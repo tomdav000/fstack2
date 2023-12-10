@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy:{
       '/api':{
-        target: 'https://fullstack2-86q9.onrender.com',
+        target: 'fstack2-production.up.railway.app',
         changeOrigin: true,
         rewrite: (path) => { console.log(path); return path.replace('/^\/api/','')}
       }
